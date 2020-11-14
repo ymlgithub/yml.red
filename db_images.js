@@ -1,0 +1,1 @@
+db_images=[{1:"images/alipay.jpg"},{2:"images/wechatpay.png"}];
