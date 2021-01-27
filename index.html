@@ -36,8 +36,8 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://yml.red/$%7Bitem[0]%7D">
 <meta property="og:image" content="https://yml.red/$%7Bitem[0]%7D">
-<meta property="article:published_time" content="2021-01-27T12:52:45.698Z">
-<meta property="article:modified_time" content="2021-01-27T12:52:45.698Z">
+<meta property="article:published_time" content="2021-01-27T13:24:15.453Z">
+<meta property="article:modified_time" content="2021-01-27T13:24:15.453Z">
 <meta property="article:author" content="杨明亮">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://yml.red/$%7Bitem[0]%7D">
@@ -377,9 +377,7 @@
     let screenW = grid.offsetWidth
     let imgW = 400
     let cols = 1
-    if (screenW < imgW) {
-        imgW = screenW
-    } else {
+    if (screenW >= imgW) {
         cols = Math.floor(screenW / imgW)
     }
     document.querySelector('.grid-sizer').style['width'] = `${100.0 / cols}%`
