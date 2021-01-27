@@ -36,8 +36,8 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://yml.red/$%7Bitem[0]%7D">
 <meta property="og:image" content="https://yml.red/$%7Bitem[0]%7D">
-<meta property="article:published_time" content="2021-01-27T13:24:15.453Z">
-<meta property="article:modified_time" content="2021-01-27T13:24:15.453Z">
+<meta property="article:published_time" content="2021-01-27T13:39:10.231Z">
+<meta property="article:modified_time" content="2021-01-27T13:39:10.231Z">
 <meta property="article:author" content="杨明亮">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://yml.red/$%7Bitem[0]%7D">
@@ -416,7 +416,10 @@
         gallery = new Viewer(document.querySelector('.grid'), { url: 'data-original' })
 
         if (imgs_loaded >= imgs.length) {
-            console.log('all.')
+            document.querySelector('#loadMore').innerHTML = '<i class="fa fa-check-circle"> 全部加载完了。</i>'
+            document.querySelector('#loadMore').onclick = ()=>{
+                console.log('全部加载完毕。')
+            }
         }
     }
 
