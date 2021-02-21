@@ -36,8 +36,8 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://yml.red/$%7Bitem[0]%7D">
 <meta property="og:image" content="https://yml.red/$%7Bitem[0]%7D">
-<meta property="article:published_time" content="2021-02-21T08:30:13.929Z">
-<meta property="article:modified_time" content="2021-02-21T08:30:13.929Z">
+<meta property="article:published_time" content="2021-02-21T08:36:04.677Z">
+<meta property="article:modified_time" content="2021-02-21T08:36:04.677Z">
 <meta property="article:author" content="杨明亮">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://yml.red/$%7Bitem[0]%7D">
@@ -379,6 +379,8 @@
     let cols = 1
     if (screenW >= imgW) {
         cols = Math.floor(screenW / imgW)
+        imgW = Math.floor(screenW / cols)
+        console.log('imgW=', imgW)
     }
     document.querySelector('.grid-sizer').style['width'] = `${100.0 / cols}%`
 
@@ -392,7 +394,7 @@
             data_.sort((b, a) => a.name.localeCompare(b.name))
             data_.forEach((v, i) => {
                 let item = v.name
-                imgs.push([`${baseUrl}/?/${item}&t=${imgW - 10}`, `${baseUrl}/?/${item}`])
+                imgs.push([`${baseUrl}/?/${item}&t=${imgW}`, `${baseUrl}/?/${item}`])
             })
 
             loadMore()
@@ -417,7 +419,7 @@
 
         if (imgs_loaded >= imgs.length) {
             document.querySelector('#loadMore').innerHTML = '<i class="fa fa-check-circle"> 全部加载完了。</i>'
-            document.querySelector('#loadMore').onclick = ()=>{
+            document.querySelector('#loadMore').onclick = () => {
                 console.log('全部加载完毕。')
             }
         }
